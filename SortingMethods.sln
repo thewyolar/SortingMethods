@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSort", "MergeSort\MergeSort.csproj", "{86FF3AAD-112C-4581-81D5-9B2405CE8968}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSort", "QuickSort\QuickSort.csproj", "{B1366E8E-9F5F-4EE0-BF3D-94BB96FDA2FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86FF3AAD-112C-4581-81D5-9B2405CE8968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86FF3AAD-112C-4581-81D5-9B2405CE8968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86FF3AAD-112C-4581-81D5-9B2405CE8968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86FF3AAD-112C-4581-81D5-9B2405CE8968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1366E8E-9F5F-4EE0-BF3D-94BB96FDA2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1366E8E-9F5F-4EE0-BF3D-94BB96FDA2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1366E8E-9F5F-4EE0-BF3D-94BB96FDA2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1366E8E-9F5F-4EE0-BF3D-94BB96FDA2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
