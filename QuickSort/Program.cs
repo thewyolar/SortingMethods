@@ -31,7 +31,7 @@ public class Program
         sw.Restart();
         QuickSortParallel(test2);
         sw.Stop();
-        Console.WriteLine("[Parallel Quick Sort] Время, затраченное на выполнение: " + sw.ElapsedMilliseconds + "ms");
+        Console.WriteLine("[Parallel Quick Sort] Время, затраченное на выполнение: " + sw.ElapsedMilliseconds + "ms\n");
     }
     
     public static void Main(string[] args)

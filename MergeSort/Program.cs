@@ -31,7 +31,7 @@ class Program
         sw.Restart();
         MultithreadedMergeSort(test2, 6);
         sw.Stop();
-        Console.WriteLine("[Multithreaded Merge Sort] Время, затраченное на выполнение: " + sw.ElapsedMilliseconds + "ms");
+        Console.WriteLine("[Multithreaded Merge Sort] Время, затраченное на выполнение: " + sw.ElapsedMilliseconds + "ms\n");
     }
     
     static void Main(string[] args)
@@ -43,8 +43,7 @@ class Program
         Test(1000000);
         Test(10000000);
         Test(100000000);
-
-        Console.WriteLine();
+        
         Console.WriteLine("Для выхода нажмите любую клавишу...");
         Console.ReadKey();
     }
