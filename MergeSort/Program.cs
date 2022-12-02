@@ -13,16 +13,39 @@ class Program
 
         return result;
     }
-
-
-    static void Main(string[] args)
+    
+    public static void Test(int size)
     {
         Stopwatch sw = new Stopwatch();
-        int[] test1 = Generate(10000000);
+        int[] test1 = Generate(size);
+        int[] test2 = new int[test1.Length];
+        Array.Copy(test1, test2, test1.Length);
+        
+        Console.WriteLine($"Тест. Кол-во элементов {size}:");
+        
         sw.Start();
-        //MergeSortSequential(test1);
-        MultithreadedMergeSort(test1, 6);
+        MergeSortSequential(test1);
         sw.Stop();
-        Console.WriteLine("Время, затраченное на выполнение: " + sw.ElapsedMilliseconds + "ms");
+        Console.WriteLine("[Merge Sort] Время, затраченное на выполнение: " + sw.ElapsedMilliseconds + "ms");
+        
+        sw.Restart();
+        MultithreadedMergeSort(test2, 6);
+        sw.Stop();
+        Console.WriteLine("[Multithreaded Merge Sort] Время, затраченное на выполнение: " + sw.ElapsedMilliseconds + "ms");
+    }
+    
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Запуск тестов.");
+
+        Test(10000);
+        Test(100000);
+        Test(1000000);
+        Test(10000000);
+        Test(100000000);
+
+        Console.WriteLine();
+        Console.WriteLine("Для выхода нажмите любую клавишу...");
+        Console.ReadKey();
     }
 }

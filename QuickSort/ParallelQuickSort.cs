@@ -4,41 +4,41 @@ namespace QuickSort;
 
 public class ParallelSort
 {
-    public static void QuicksortSequential<T>(T [] arr) where T : INumber<T>
+    public static void QuickSortSequential<T>(T [] arr) where T : INumber<T>
     {
-        QuicksortSequential(arr, 0, arr.Length - 1);
+        QuickSortSequential(arr, 0, arr.Length - 1);
     }
     
-    public static void QuicksortParallel<T>(T[] arr) where T : INumber<T>
+    public static void QuickSortParallel<T>(T[] arr) where T : INumber<T>
     {
-        QuicksortParallel(arr, 0, arr.Length - 1);
+        QuickSortParallel(arr, 0, arr.Length - 1);
     }
     
-    private static void QuicksortSequential<T>(T[] arr, int left, int right) where T : INumber<T>
+    private static void QuickSortSequential<T>(T[] arr, int left, int right) where T : INumber<T>
     {
         if (right > left)
         {
             int pivot = Partition(arr, left, right);
-            QuicksortSequential(arr, left, pivot - 1);
-            QuicksortSequential(arr, pivot + 1, right);
+            QuickSortSequential(arr, left, pivot - 1);
+            QuickSortSequential(arr, pivot + 1, right);
         }
     }
 
-    private static void QuicksortParallel<T>(T[] arr, int left, int right) where T : INumber<T>
+    private static void QuickSortParallel<T>(T[] arr, int left, int right) where T : INumber<T>
     {
         const int SEQUENTIAL_THRESHOLD = 2048;
         if (right > left)
         {
             if (right - left < SEQUENTIAL_THRESHOLD)
             {
-                QuicksortSequential(arr, left, right);
+                QuickSortSequential(arr, left, right);
             }
             else
             {
                 int pivot = Partition(arr, left, right);
                 Parallel.Invoke(
-                    () => QuicksortParallel(arr, left, pivot - 1),
-                    () => QuicksortParallel(arr, pivot + 1, right));
+                    () => QuickSortParallel(arr, left, pivot - 1),
+                    () => QuickSortParallel(arr, pivot + 1, right));
             }
         }
     }
