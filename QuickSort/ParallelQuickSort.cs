@@ -2,7 +2,7 @@
 
 namespace QuickSort;
 
-public class ParallelSort
+public class ParallelQuickSort
 {
     public static void QuickSortSequential<T>(T [] arr) where T : INumber<T>
     {

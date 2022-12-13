@@ -1,5 +1,5 @@
 ﻿using System.Diagnostics;
-using static QuickSort.ParallelSort;
+using static QuickSort.ParallelQuickSort;
 
 namespace QuickSort;
 
